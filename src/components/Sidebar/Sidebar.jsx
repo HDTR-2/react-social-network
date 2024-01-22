@@ -1,23 +1,23 @@
 import React from 'react';
-import './sidebar.css';
+import style from './sidebar.module.scss';
 const Sidebar = () => {
   return (
-    <nav className="sidebar">
+    <nav className={style.sidebar}>
       <ul>
         <a>
-          <li>Profile</li>
+          <li className={style.item}>Profile</li>
         </a>
         <a>
-          <li>Messages</li>
+          <li className={style.item}>Messages</li>
         </a>
         <a>
-          <li>News</li>
+          <li className={style.item}>News</li>
         </a>
         <a>
-          <li>Music</li>
+          <li className={style.item}>Music</li>
         </a>
         <a>
-          <li>Settings</li>
+          <li className={style.item}>Settings</li>
         </a>
       </ul>
     </nav>

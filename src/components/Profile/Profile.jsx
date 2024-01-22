@@ -1,15 +1,13 @@
 import React from 'react';
-import './profile.css';
+import style from './profile.module.scss';
+import img from '../../img/MainBackground.jpg';
 const Profile = () => {
   return (
-    <div className="content">
-      <div className="background">
-        <img
-          src="https://img.freepik.com/premium-photo/image-landscape-with-colorful-mountains-sky_772924-2469.jpg"
-          alt=""
-        />
+    <div className={style.content}>
+      <div className={style.background}>
+        <img src={img} alt="" />
       </div>
-      <div className="avatar">
+      <div className={style.avatar}>
         <img src="https://pixlr.com/images/index/product-image-two.webp" alt="" />
       </div>
     </div>

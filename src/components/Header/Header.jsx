@@ -1,14 +1,12 @@
 import React from 'react';
-import './header.css';
+import style from './header.module.scss';
+import img from '../../img/Logo.png';
 const Header = () => {
   return (
-    <header className="header">
+    <header className={style.header}>
       <h1>
         <a href="/">
-          <img
-            src="https://img.freepik.com/free-vector/colorful-abstract-icon-gradient-logo_474888-2277.jpg"
-            alt="logo"
-          />
+          <img src={img} alt="logo" />
         </a>
       </h1>
     </header>

@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
 ul li {
   list-style: none;
 }
 .app-wrapper {
+  font-family: 'Jost', serif;
   margin: 0 auto;
   width: 1200px;
   display: grid;
