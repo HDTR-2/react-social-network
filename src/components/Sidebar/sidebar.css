@@ -1,0 +1,4 @@
+.sidebar {
+  z-index: 5;
+  grid-area: sidebar;
+}
