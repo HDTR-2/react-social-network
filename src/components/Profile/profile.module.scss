@@ -1,0 +1,14 @@
+.content {
+  background: radial-gradient(circle, rgba(40, 33, 64, 1) 0%, rgba(36, 26, 50, 1) 100%);
+  grid-area: content;
+}
+.background {
+  & img {
+    width: 100%;
+  }
+}
+.avatar {
+  & img {
+    width: 100px;
+  }
+}
