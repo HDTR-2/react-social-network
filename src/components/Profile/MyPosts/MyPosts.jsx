@@ -6,9 +6,12 @@ const MyPosts = () => {
   return (
     <>
       <div>
-        <textarea></textarea>
-        <button>Add post</button>
-        <button>Remove</button>
+        <div>
+          <textarea></textarea>
+        </div>
+        <div>
+          <button>Add post</button>
+        </div>
       </div>
       <div className={style.posts}>
         <Post message="Hi" likeCount="115" />

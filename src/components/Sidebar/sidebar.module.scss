@@ -5,13 +5,20 @@
   align-items: center;
   z-index: 5;
   grid-area: sidebar;
-  background: linear-gradient(160deg, rgba(79, 24, 116, 1) 6%, rgba(171, 114, 34, 1) 120%);
+  background: #242731;
 }
 .item {
   margin-top: 30px;
   cursor: pointer;
-  color: #fff;
-  &:hover {
-    color: rgb(223, 138, 21);
+  & a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(103, 87, 214, 1);
+    }
+    &.active {
+      color: rgba(103, 87, 214, 1);
+    }
   }
 }

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
 body {
-  background: radial-gradient(circle, rgba(171, 114, 34, 1) 10%, rgba(79, 24, 116, 1) 100%);
+  background: #1b1a23;
 }
 ul li {
   list-style: none;
@@ -18,6 +18,6 @@ ul li {
   grid-template-columns: 2fr 10fr;
 }
 .app-wrapper-content {
-  background: radial-gradient(circle, rgba(40, 33, 64, 1) 0%, rgba(36, 26, 50, 1) 100%);
+  background: #302f3b;
   grid-area: content;
 }

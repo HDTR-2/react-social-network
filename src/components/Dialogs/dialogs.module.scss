@@ -1,0 +1,33 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    color: #fff;
+}
+
+.dialogsItems {
+    padding: 10px;
+}
+
+.dialog {
+    cursor: pointer;
+    margin: 20px;
+    & a {
+        color: #fff;
+        text-decoration: none;
+        &.active {
+            color: rgba(103, 87, 214, 1);
+            margin: 20px;
+        }
+        &:hover {
+            color: rgba(103, 87, 214, 1);
+        }
+    }
+}
+
+.messeges {
+    padding: 10px;
+}
+
+.messege {
+    margin: 20px;
+}
