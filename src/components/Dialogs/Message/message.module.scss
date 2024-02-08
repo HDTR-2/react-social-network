@@ -1,0 +1,27 @@
+.messeges {
+    padding: 20px;
+}
+.block {
+    display: flex;
+    align-items: start;
+    height: 56px;
+    margin: 20px;
+}
+.messege {
+    padding: 10px;
+    word-wrap: break-word;
+    width: 50px;
+}
+
+.countMessage {
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    background-color: rgba(103, 87, 214, 1);
+    cursor: pointer;
+}

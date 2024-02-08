@@ -1,38 +1,43 @@
 import React from 'react';
+import DialogItem from './DialogItem/DialogItem';
+import Message from './Message/Message';
+
 import style from './dialogs.module.scss';
-import { NavLink } from 'react-router-dom';
 
-const navActive = ({ isActive }) => (isActive ? style.active : style.dialog);
+const Dialogs = (props) => {
+  const state = props.dialogsPage;
 
-const DialogItem = (props) => {
-  return (
-    <div className={style.dialog}>
-      <NavLink to={`/dialogs/${props.id}`} className={navActive}>
-        {props.name}
-      </NavLink>
-    </div>
-  );
-};
+  const dialogsElements = state.dialogData.map((item) => (
+    <DialogItem id={item.id} name={item.name} />
+  ));
+  const messagesElements = state.messageData.map((item) => (
+    <Message id={item.id} message={item.message} countMessage={item.countMessage} />
+  ));
+  const newMessageBody = state.newMessageBody;
 
-const Message = (props) => {
-  return <div className={style.messege}>{props.message}</div>;
-};
+  const onSendMessageClick = (e) => {
+    props.sendMessage();
+  };
+  const onNewMessageChange = (e) => {
+    let body = e.target.value;
+    props.updateNewMessageBody(body);
+  };
 
-const Dialogs = () => {
   return (
     <div>
       <div className={style.dialogs}>
-        <div className={style.dialogsItems}>
-          <DialogItem id="1" name="Name1" />
-          <DialogItem id="2" name="Name2" />
-          <DialogItem id="3" name="Name3" />
-          <DialogItem id="4" name="Name4" />
+        <div className={style.dialogsItems}>{dialogsElements}</div>
+        <div className={style.messeges}>{messagesElements}</div>
+      </div>
+      <div className={style.textBox}>
+        <div>
+          <textarea
+            value={newMessageBody}
+            onChange={onNewMessageChange}
+            className={style.textarea}></textarea>
         </div>
-        <div className={style.messeges}>
-          <Message message="Hello" />
-          <Message message="Hello" />
-          <Message message="Hello" />
-          <Message message="Hello" />
+        <div>
+          <button onClick={onSendMessageClick}>Add post</button>
         </div>
       </div>
     </div>
