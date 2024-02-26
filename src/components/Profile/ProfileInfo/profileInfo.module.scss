@@ -3,3 +3,29 @@
         width: 100%;
     }
 }
+.descriptionBlock {
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: 2fr 10fr;
+    padding: 20px;
+    gap: 10px;
+}
+.description {
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+}
+
+.avaDescription {
+}
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+        }
+    }
+}

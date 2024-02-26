@@ -23,6 +23,12 @@ const Sidebar = (props) => {
           </li>
 
           <li className={style.item}>
+            <NavLink to="/users" className={navActive}>
+              Users
+            </NavLink>
+          </li>
+
+          <li className={style.item}>
             <NavLink to="/news" className={navActive}>
               News
             </NavLink>
