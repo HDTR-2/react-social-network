@@ -21,7 +21,7 @@ const ProfileInfo = (props) => {
         />
 
         <p className={style.description}>
-          <ProfileStatus status={'HiHiHi'} />
+          <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
         </p>
         <div className={style.contacts}>
           <a href={props.profile.contacts.vk}>VK</a>
