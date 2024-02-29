@@ -1,0 +1,48 @@
+.formLogin {
+    padding-top: 20px;
+    text-align: center;
+    display: grid;
+    align-content: inherit;
+    justify-content: center;
+    color: #fff;
+    h1 {
+        padding: 20px;
+    }
+}
+.form {
+    display: grid;
+    gap: 10px;
+}
+.field {
+    color: rgba(103, 87, 214, 1);
+    background: rgba(33, 31, 42, 0.96);
+    border: none;
+    width: 300px;
+    height: 30px;
+    outline: none;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formBlock {
+    display: grid;
+    gap: 10px;
+}
+
+.button {
+    height: 34px;
+    border: none;
+    color: #fff;
+    background-color: rgba(103, 87, 214, 1);
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background: rgb(71, 56, 167);
+        box-shadow: 0px 5px 5px 5px rgba(17, 13, 48, 0.5);
+    }
+    &:active {
+        transform: translateY(-2px);
+    }
+}
