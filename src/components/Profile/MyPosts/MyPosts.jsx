@@ -14,8 +14,10 @@ const MyPosts = (props) => {
   ));
 
   return (
-    <div>
-      <PostFormSubmit addPosts={props.addPosts} />
+    <div className={style.mypost}>
+      <div className={style.addPost}>
+        <PostFormSubmit addPosts={props.addPosts} />
+      </div>
       <div className={style.posts}>{postsElement}</div>
     </div>
   );

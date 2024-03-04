@@ -5,21 +5,21 @@ import style from './formSubmit.module.scss';
 export const MessageFormSubmit = (props) => {
   const {
     register,
-    formState: { errors, isValid },
+    formState: { errors },
     handleSubmit,
     reset,
   } = useForm({
-    mode: 'onBlur',
+    mode: 'all',
   });
   const onSubmit = (data) => {
     props.sendMessage(data.newMessage);
     reset();
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
       <div>
         <textarea
-          className={style.message ? !errors.newMessage : style.error}
           {...register('newMessage', {
             required: 'Enter at least something',
             maxLength: {
@@ -27,15 +27,13 @@ export const MessageFormSubmit = (props) => {
               message: 'Max length is 200 symbols',
             },
           })}
+          invalid={errors.newMessage ? 'true' : 'false'}
         />
+        <p className={errors.newMessage && style['invalid']}>{errors.newMessage?.message}</p>
       </div>
-      <div className={style.errors}>
-        {errors.newMessage && <p>{errors.newMessage.message || 'Error!'}</p>}
-      </div>
+
       <div>
-        <button disabled={!isValid} type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
       </div>
     </form>
   );
@@ -44,11 +42,11 @@ export const MessageFormSubmit = (props) => {
 export const PostFormSubmit = (props) => {
   const {
     register,
-    formState: { errors, isValid },
+    formState: { errors },
     handleSubmit,
     reset,
   } = useForm({
-    mode: 'onBlur',
+    mode: 'all',
   });
   const onSubmit = (data) => {
     props.addPosts(data.newPostBody);
@@ -67,14 +65,11 @@ export const PostFormSubmit = (props) => {
             },
           })}
         />
+        <p className={errors.newPostBody && style['invalid']}>{errors.newPostBody?.message}</p>
       </div>
-      <div className={style.errors}>
-        {errors.newPostBody && <p>{errors.newPostBody.message || 'Error!'}</p>}
-      </div>
+
       <div>
-        <button disabled={!isValid} type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
       </div>
     </form>
   );

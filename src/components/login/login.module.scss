@@ -1,5 +1,6 @@
 .formLogin {
     padding-top: 20px;
+    padding-bottom: 50px;
     text-align: center;
     display: grid;
     align-content: inherit;
@@ -7,17 +8,21 @@
     color: #fff;
     h1 {
         padding: 20px;
+        font-size: 30px;
+        font-weight: 700;
+        color: rgba(103, 87, 214, 1);
     }
 }
 .form {
     display: grid;
+    width: 400px;
     gap: 10px;
 }
 .field {
+    width: 400px;
     color: rgba(103, 87, 214, 1);
     background: rgba(33, 31, 42, 0.96);
     border: none;
-    width: 300px;
     height: 30px;
     outline: none;
 }
@@ -29,6 +34,8 @@
 }
 .formBlock {
     display: grid;
+
+    justify-content: center;
     gap: 10px;
 }
 
@@ -45,4 +52,27 @@
     &:active {
         transform: translateY(-2px);
     }
+}
+
+.invalid {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(253, 12, 52);
+    background: rgba(33, 31, 42, 0.96);
+    border: 1px solid red;
+}
+.checkbox {
+    display: flex;
+    gap: 10px;
+}
+.errorBlock {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(253, 12, 52);
+    background: rgba(33, 31, 42, 0.96);
+    border: 1px solid red;
 }

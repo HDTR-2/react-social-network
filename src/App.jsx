@@ -15,24 +15,29 @@ import Login from './components/login/Login';
 import './App.css';
 import './styleReset.css';
 
-function App(props) {
-  return (
-    <div className="app-wrapper">
-      <HeaderContainer />
-      <Sidebar />
-      <div className="app-wrapper-content">
-        <Routes>
-          <Route path="/profile/:userId?" element={<ProfileContainer />} />
-          <Route path="/users" element={<UsersContainer />} />
-          <Route path="/dialogs/*" element={<DialogsContainer />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+class App extends React.Component {
+  componentDidMount() {
+    this.props.getAuthUserData();
+  }
+  render() {
+    return (
+      <div className="app-wrapper">
+        <HeaderContainer />
+        <Sidebar />
+        <div className="app-wrapper-content">
+          <Routes>
+            <Route path="/profile/:userId?" element={<ProfileContainer />} />
+            <Route path="/users" element={<UsersContainer />} />
+            <Route path="/dialogs/*" element={<DialogsContainer />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

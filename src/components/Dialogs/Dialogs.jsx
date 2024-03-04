@@ -1,10 +1,8 @@
 import React from 'react';
-import { Field, isValid, reduxForm } from 'redux-form';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 
 import style from './dialogs.module.scss';
-import { useForm } from 'react-hook-form';
 import { MessageFormSubmit } from '../common/FormSubmit/FormSubmit';
 
 const Dialogs = (props) => {
