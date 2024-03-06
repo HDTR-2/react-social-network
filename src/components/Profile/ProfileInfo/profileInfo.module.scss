@@ -14,6 +14,16 @@
     font-size: 30px;
     color: #fff;
     padding: 10px;
+    input {
+        padding: 7px;
+        font-size: 25px;
+        width: 500px;
+        color: rgba(103, 87, 214, 1);
+        background: rgba(33, 31, 42, 0.96);
+        border: none;
+        height: 30px;
+        outline: none;
+    }
 }
 
 .avaDescription {
@@ -28,4 +38,7 @@
         &:hover {
         }
     }
+}
+
+.status {
 }

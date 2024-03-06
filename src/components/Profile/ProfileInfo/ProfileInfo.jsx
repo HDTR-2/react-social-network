@@ -3,7 +3,7 @@ import style from './profileInfo.module.scss';
 import img from '../../../img/MainBackground.jpg';
 import Preloader from '../../common/Preloader/Preloader';
 import userPhoto from '../../../img/userDefault.svg';
-import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -21,7 +21,7 @@ const ProfileInfo = (props) => {
         />
 
         <p className={style.description}>
-          <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+          <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
         </p>
         <div className={style.contacts}>
           <a href={props.profile.contacts.vk}>VK</a>
