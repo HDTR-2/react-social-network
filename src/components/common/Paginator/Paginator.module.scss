@@ -1,0 +1,14 @@
+.pagginationPages {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    color: #fff;
+    span {
+        cursor: pointer;
+    }
+}
+.selectedPage {
+    font-weight: bold;
+    color: rgb(103, 87, 214);
+    background: transparent;
+}

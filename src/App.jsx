@@ -12,7 +12,6 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import Login from './components/login/Login';
 import { connect } from 'react-redux';
-import { getAuthUserData } from './redux/auth-reducer';
 import { initializeApp } from './redux/app-reducer';
 
 import './App.css';
