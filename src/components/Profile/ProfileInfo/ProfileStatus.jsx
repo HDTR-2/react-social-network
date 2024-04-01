@@ -6,12 +6,12 @@ class ProfileStatus extends React.Component {
     status: this.props.status,
   };
 
-  activateEdithMode = () => {
+  activateEditMode = () => {
     this.setState({
       edithMode: true,
     });
   };
-  deactivateEdithMode = () => {
+  deactivateEditMode = () => {
     this.setState({
       edithMode: false,
     });
@@ -37,14 +37,14 @@ class ProfileStatus extends React.Component {
       <div>
         {!this.state.edithMode ? (
           <div>
-            <span onDoubleClick={this.activateEdithMode}>{this.props.status || 'No Status'}</span>
+            <span onDoubleClick={this.activateEditMode}>{this.props.status || 'No Status'}</span>
           </div>
         ) : (
           <div>
             <input
               onChange={this.onStatusChange}
               autoFocus
-              onBlur={this.deactivateEdithMode}
+              onBlur={this.deactivateEditMode}
               value={this.state.status}
             />
           </div>

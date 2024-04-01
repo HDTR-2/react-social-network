@@ -10,19 +10,16 @@ let state = {
     {
       id: 2,
       message: 'Yo',
-
       likesCount: 121,
     },
     {
       id: 3,
       message: 'By',
-
       likesCount: 111,
     },
     {
       id: 4,
       message: 'Hi',
-
       likesCount: 411,
     },
   ],

@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import store from './redux/redux-store';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+
+import { compose } from 'redux';
+import { Provider, connect } from 'react-redux';
+import { initializeApp } from './redux/app-reducer';
 
 import HeaderContainer from './components/Header/HeaderContainer';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -11,8 +16,6 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import Login from './components/login/Login';
-import { connect } from 'react-redux';
-import { initializeApp } from './redux/app-reducer';
 
 import './App.css';
 import './styleReset.css';
@@ -49,4 +52,16 @@ class App extends Component {
 const mapStateToProps = (state) => ({
   initialized: state.app.initialized,
 });
-export default connect(mapStateToProps, { initializeApp })(App);
+
+const AppContainer = compose(connect(mapStateToProps, { initializeApp })(App));
+
+const MainApp = () => {
+  return (
+    <BrowserRouter>
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    </BrowserRouter>
+  );
+};
+export default MainApp;
