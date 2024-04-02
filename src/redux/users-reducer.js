@@ -1,5 +1,4 @@
 import { userAPI } from '../api/api';
-import { updateObjectInArray } from '../utils/objects-helper';
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -12,7 +11,6 @@ const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE-IS-FOLLOWING-PROGRESS';
 let initialState = {
   users: [],
   pageSize: 10,
-  dataLimit: 30,
   totalUsersCount: 0,
   currentPage: 1,
   isFetching: false,
@@ -74,12 +72,12 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
 
 //Thunk========================================================================================================================================================
 
-export const getUsers = (currentPage, pageSize, dataLimit) => {
+export const getUsers = (currentPage, pageSize) => {
   return async (dispatch) => {
     dispatch(toggleIsFetching(true));
     dispatch(setCurrentPage(currentPage));
 
-    const data = await userAPI.getUsers(currentPage, pageSize, dataLimit);
+    const data = await userAPI.getUsers(currentPage, pageSize);
     dispatch(toggleIsFetching(false));
     dispatch(setUsers(data.items));
     dispatch(setTotalUsersCount(data.totalCount));

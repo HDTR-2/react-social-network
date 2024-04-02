@@ -1,6 +1,7 @@
 import React from 'react';
 import Paginator from '../common/Paginator/Paginator';
 import User from './User';
+import style from './users.module.scss';
 
 const Users = ({
   currentPage,
@@ -23,13 +24,15 @@ const Users = ({
         pageSize={pageSize}
       />
       {users.map((user) => (
-        <User
-          user={user}
-          key={user.id}
-          followingInProgress={followingInProgress}
-          follow={follow}
-          unfollow={unfollow}
-        />
+        <div className={style.users}>
+          <User
+            user={user}
+            key={user.id}
+            followingInProgress={followingInProgress}
+            follow={follow}
+            unfollow={unfollow}
+          />
+        </div>
       ))}
     </div>
   );

@@ -9,6 +9,9 @@
     grid-template-columns: 2fr 10fr;
     padding: 20px;
     gap: 10px;
+    img {
+        width: 200px;
+    }
 }
 .description {
     font-size: 30px;

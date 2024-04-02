@@ -3,8 +3,13 @@
     gap: 20px;
     padding: 20px;
     color: #fff;
+    font-size: 18px;
     span {
+        transition: all 0.3s ease 0s;
         cursor: pointer;
+        &:hover {
+            color: rgb(103, 87, 214);
+        }
     }
 }
 .selectedPage {
